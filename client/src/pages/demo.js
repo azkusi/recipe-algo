@@ -1016,7 +1016,7 @@ function Demo() {
                                     </div>
                                     :
                                     <div>
-                                        <h3>Waiting for next steps</h3>
+                                        <h3>Loading next steps...</h3>
                                         <br/>
                                         <br/>
                                         <br/>
@@ -1047,7 +1047,7 @@ function Demo() {
                             
                             :
                             <div>
-                              <h3>Waiting for next steps</h3>
+                              <h3>Loading next steps...</h3>
                               <br/>
                               <br/>
                               <br/>

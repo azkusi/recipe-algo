@@ -1034,7 +1034,7 @@ function ChefAlgo() {
                                     </div>
                                     :
                                     <div>
-                                        <h3>Waiting for next steps</h3>
+                                        <h3>Loading next steps...</h3>
                                         <br/>
                                         <br/>
                                         <br/>
@@ -1065,7 +1065,7 @@ function ChefAlgo() {
                             
                             :
                             <div>
-                              <h3>Waiting for next steps</h3>
+                              <h3>Loading next steps...</h3>
                               <br/>
                               <br/>
                               <br/>
