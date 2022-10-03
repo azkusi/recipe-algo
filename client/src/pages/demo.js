@@ -6,7 +6,7 @@
 import mixing_bowl from '../images/mixing_bowl.jpg';
 import Black_Circle from '../images/Black_Circle.jpeg'
 
-import NotificationSound from '../sounds/NotificationSound.mp3';
+// import NotificationSound from '../sounds/NotificationSound.mp3';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -123,6 +123,8 @@ function Demo() {
 
     const [recipes, set_recipes] = useState(null)
 
+    const [audio, setAudio] = useState('../sounds/NotificationSound.mp3')
+
 
     //=====================================================
     //       USE EFFECT HOOK FOR PLAYING AUDIO WHEN NEW 
@@ -135,7 +137,8 @@ function Demo() {
                 set_to_do_steps_length(0)
             }
             if(to_do_steps["steps"].length > 0 && to_do_steps_prior_length === 0 && stage === "STOVE-SECONDARY"){
-                playAudio()
+                // playAudio()
+                audio.play()
                 set_to_do_steps_prior_length(to_do_steps_prior_length + 1)
                 
             } 
@@ -810,7 +813,7 @@ function Demo() {
             
             <Container>
                 <h1 style={{"color": "#FF9F33"}}>Demo</h1>
-                <audio ref={audioPlayer} src={NotificationSound} />
+                {/* <audio ref={audioPlayer} src={NotificationSound} /> */}
                 <Row style={{"border": "solid", "borderColor": "#FF9F33", "padding": "10px", "backgroundColor": "#FF9F33", "color": "white", "margin-bottom": "10px"}}>
                     <Col>
                         <h2>Stage: {stage}</h2> 
@@ -1144,6 +1147,7 @@ function Demo() {
 
 
                         { (instruction_stage === 0 && recipe_cycle_number === 0 ) && <Button onClick={()=>{
+                            setAudio(new Audio('../sounds/NotificationSound.mp3'))
                             setStage('LOAD')
                             set_app_starting(true)
                             set_instruction_stage(instruction_stage + 1)
